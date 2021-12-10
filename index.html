@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Trabalho Linguagens - Analisador Léxico</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>         
+
+    </head>
+        <body>
+            <header class="AL_nav">
+                <div class="AL_Title">
+                    <h1 class="brand-logo">Analisador Léxico</h1>
+                </div>
+            </header>
+            <main>
+                <div class="container margin-top-default">
+                    <div class="flex">
+                        <div class="row">
+                            <div class="col s12 m12">
+                                <div class="padding-default upper">
+                                    <span class="card-title " style="padding-top: 20px;">
+                                        Preencha o campo com uma ou mais palavras e aperte Enter:
+                                    </span>
+                                    <div class="card-content">
+                                        <div class="chips focus" id="chips"></div>
+                                    </div>
+                                    <div class="btn-adjust margin-top-default">
+                                        <button class="btn btn-width-custom #01579b light-blue darken-4 margin" type="submit" onclick="analisador_lexico.updateTable();" id="update-table" name="action">Adicionar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="padding-default testing">
+                                <span class="card-title" style="padding-top: 20px;">
+                                    Testar Palavra:
+                                </span>
+                                <div class="card-content">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input class="input-testing" id="word" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="col s12 m12">
+                            <div class="padding-default table">
+                                <span class="card-title " style="padding-top: 20px;">
+                                    Tabela:
+                                </span>
+                                    <div class="card-content">
+                                        <table class="table striped" id="tabela-lexica">
+                                            <thead class="alphabet">
+                                                <tr>
+                                                    <th >&delta;</th>
+                                                    <th >A</th><th >B</th>
+                                                    <th >C</th><th >D</th>
+                                                    <th >E</th><th >F</th>
+                                                    <th >G</th><th >H</th>
+                                                    <th >I</th><th >J</th>
+                                                    <th >K</th><th >L</th>
+                                                    <th >M</th><th >N</th>
+                                                    <th >O</th><th >P</th>
+                                                    <th >Q</th><th >R</th>
+                                                    <th >S</th><th >T</th>
+                                                    <th >U</th><th >V</th>
+                                                    <th >W</th><th >X</th>
+                                                    <th >Y</th><th >Z</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="border-solid"></tbody>
+                                        </table>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </main>
+        </body>
+            <script src="analisador_lexico.js"></script>
+            <script src="control.js"></script>
+            <script> 
+                const analisador_lexico = new AnalisadorLexico();
+                analisador_lexico.init();</script>
+</html>
